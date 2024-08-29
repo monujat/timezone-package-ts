@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/timezones.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "monuchoudhary660@gmail.com",
@@ -16,15 +15,10 @@
     "url": "https://github.com/monujat/timezone-package-ts.git"
   },
   "dependencies": {
+    "moment-timezone": "^0.5.40",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
+    "@types/moment-timezone": "^0.5.30"
   }
 }

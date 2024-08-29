@@ -1,6 +1,7 @@
 import RawData from "./rawData.json";
 import Abb from "./abbreviationList.json";
 import { RawDataItem, FormattedResponse, TimezoneGroup } from "./types";
+import moment from 'moment-timezone';
 
 // Utility function to zero-pad numbers
 const zeroPad = (num: number, places: number): string => {
@@ -32,7 +33,7 @@ export const formateResponse = (data: RawDataItem): FormattedResponse => {
   offset = `${offset}${_h}:${_i}`;
 
   // Safely access the abbreviation or fallback to the offset
-  const abbreviation = Abb[data.alternativeName as keyof typeof Abb] ?? offset;
+  const abbreviation = Abb[data.alternativeName as keyof typeof Abb] ?? moment.tz(data.name).zoneAbbr();
 
   return {
     name: data.name,
