@@ -12,7 +12,7 @@
     "build": "tsc",
     "prebuild": "yarn clean",
     "lint": "tsc --noEmit",
-    "test": "yarn build && node --test test/",
+    "test": "yarn build && node --test",
     "prepublishOnly": "yarn test"
   },
   "keywords": [
