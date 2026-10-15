@@ -1,24 +1,53 @@
 {
   "name": "timezone-package-ts",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Lightweight, zero-dependency TypeScript package for timezone data, country groupings, UTC offsets, and searching.",
   "main": "lib/index.js",
-  "types": "lib/timezones.d.ts",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "tsc"
+    "clean": "rm -rf lib",
+    "build": "tsc",
+    "prebuild": "yarn clean",
+    "lint": "tsc --noEmit",
+    "test": "yarn build && node --test test/",
+    "prepublishOnly": "yarn test"
   },
-  "keywords": [],
+  "keywords": [
+    "timezone",
+    "timezones",
+    "timezone-data",
+    "timezone-list",
+    "tz",
+    "iana",
+    "iana-timezone",
+    "utc",
+    "utc-offset",
+    "gmt",
+    "offset",
+    "country",
+    "country-timezones",
+    "country-codes",
+    "iso-country-codes",
+    "continent",
+    "world-time",
+    "search-timezone",
+    "zero-dependency",
+    "typescript",
+    "date-time",
+    "time-utility",
+    "moment-alternative"
+  ],
   "author": "monuchoudhary660@gmail.com",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/monujat/timezone-package-ts.git"
   },
-  "dependencies": {
-    "moment-timezone": "^0.5.40",
-    "typescript": "^5.5.4"
-  },
   "devDependencies": {
-    "@types/moment-timezone": "^0.5.30"
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4"
   }
 }
