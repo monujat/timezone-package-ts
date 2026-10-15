@@ -1,6 +1,6 @@
 {
   "name": "timezone-package-ts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Lightweight, zero-dependency TypeScript package for timezone data, country groupings, UTC offsets, and searching.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

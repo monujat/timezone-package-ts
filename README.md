@@ -238,14 +238,14 @@ This repository includes automated GitHub Actions workflows:
    - Click **Add secret**.
 
 3. **Release a New Version**:
-   - Update `"version"` in `package.json` (e.g. `1.0.4`).
+   - Update `"version"` in `package.json` (e.g. `1.0.5`).
    - Push your commit:
      ```bash
-     git commit -am "chore: release 1.0.4"
+     git commit -am "chore: release 1.0.5"
      git push origin master
      ```
    - Go to **Releases** > **Draft a new release** on GitHub.
-   - Set tag version (e.g. `v1.0.4`), title, and click **Publish release**.
+   - Set tag version (e.g. `v1.0.5`), title, and click **Publish release**.
    - The workflow will automatically test, build, and publish the package to NPM!
 
 ---
